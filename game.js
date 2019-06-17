@@ -23,7 +23,6 @@ function giveFire() {
     morty.items.push("Fire"['modifier'])
   }
   update(morty)
-  alert(morty.items)
 }
 
 function giveShock() {
