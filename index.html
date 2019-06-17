@@ -12,29 +12,29 @@
 </head>
 
 <body>
-  <div class="container">
-    <div class="row justify-content-center">
-      <col-4 class="mx-4">
+  <div class="container-fluid">
+    <div class="row justify-content-center bg-success py-2">
+      <col-4 class="mx-5 border border-dark p-2">
         <span>Name: <span id="morty.name"></span></span>
       </col-4>
-      <col-4 class="mx-4">
+      <col-4 class="mx-5 border border-dark p-2">
         <span>Health:<span id="morty.health"></span></span>
       </col-4>
-      <col-4 class="mx-4">
+      <col-4 class="mx-5 border border-dark p-2">
         <span>Hits:<span id="morty.hits"></span></span>
       </col-4>
     </div>
-    <div class="row text-center">
+    <div class="row text-center py-2">
       <div class="col">
         <img id="opponent"
           src="https://cdn.shopify.com/s/files/1/1211/8882/products/Happy_Morty_Web_1024x1024.jpg?v=1503605432"
           height="200" width="200" class="img">
       </div>
     </div>
-    <footer>
-      <div class="row pt-5 text-center">
+    <footer class="mt-2 bg-light border border-success">
+      <div class="row pt-3 text-center">
         <div class="col-4">
-          <button class="btn btn-outline-danger" onclick="slap()">Slap!</button>
+          <span>Attacks: <button class="btn btn-outline-danger" onclick="slap()">Slap!</button></span>
         </div>
         <div class="col-4">
           <button class="btn btn-outline-danger" onclick="punch()">Punch!</button>
@@ -43,9 +43,9 @@
           <button class="btn btn-outline-danger" onclick="kick()">Kick!</button>
         </div>
       </div>
-      <div id="items" class="row pt-5 text-center">
+      <div id="items" class="row py-3 text-center">
         <div class="col-4">
-          <button class="btn btn-outline-primary" onclick="giveFire()">Fire</button>
+          <span>Modifiers: </span><button class="btn btn-outline-primary" onclick="giveFire()">Fire</button></span>
         </div>
         <div class="col-4">
           <button class="btn btn-outline-primary" onclick="giveShock()">Shock</button>

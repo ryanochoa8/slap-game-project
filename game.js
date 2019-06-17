@@ -19,41 +19,45 @@ let items = {
 
 }
 
-function giveFire() {
-  if (items.name = "Fire") {
+// let multiplier =
 
-    morty.items.push("Fire"['modifier']) // is this line correct?
+function giveFire() {
+  if (items.name == "Fire") {
+    morty.items.push(items['fire'].modifier) // is this line correct?
   }
   update(morty)
 }
 
+// console.log(morty.items)
+
+
+
 function giveShock() {
-  if (items.name = 'Shock') {
-    morty.items.push(items.shock) // or is this correct?
+  if (items.name == 'Shock') {
+    morty.items.push(items.shock['modifier']) // or is this correct?
   }
   update(morty)
 }
 
 function giveShield() {
-  if (items.name = 'Shield') {
-    morty.items.push(items.shield)
+  if (items.name == 'Shield') {
+    morty.items.push(items.shield['modifier'])
   }
   update(morty)
 }
 
 function addMods() { // is this function correct?
-  let mods = morty.items
+  let mods = morty.items['modifier']
   let sum = 0
   for (let i = 0; i < morty.items.length; i++) {
     sum += mods[i];
   }
   return sum
-
 }
 
 function slap() {
   if (morty.health > 0) {
-    morty.health--;
+    morty.health -= morty.attacks['slap'];
     morty.hits++;
   }
   update(morty)
@@ -61,7 +65,7 @@ function slap() {
 
 function punch() {
   if (morty.health >= 5) {
-    morty.health -= 5;
+    morty.health -= morty.attacks['punch'];
     morty.hits++;
   }
   update(morty)
@@ -69,7 +73,7 @@ function punch() {
 
 function kick() {
   if (morty.health >= 10) {
-    morty.health -= 10;
+    morty.health -= morty.attacks['kick'];
     morty.hits++;
   }
   update(morty)
