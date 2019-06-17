@@ -20,14 +20,14 @@ let items = {
 function giveFire() {
   if (items.name = "Fire") {
 
-    morty.items.push("Fire"['modifier'])
+    morty.items.push("Fire"['modifier']) //questions on this
   }
   update(morty)
 }
 
 function giveShock() {
   if (items.name = 'Shock') {
-    morty.items.push(items.shock)
+    morty.items.push(items.shock) //questions on this
   }
   update(morty)
 }
@@ -39,7 +39,7 @@ function giveShield() {
   update(morty)
 }
 
-function addMods() {
+function addMods() { //questions on this
   let mods = morty.items
   let sum = 0
   for (let i = 0; i < morty.items.length; i++) {
@@ -80,7 +80,7 @@ function update(morty) {
   document.getElementById("morty.hits").innerText = morty.hits;
   document.getElementById("morty.name").innerText = morty.name;
 }
-
+//do i need to add anything here for the modifier functions
 
 update(morty)
 
