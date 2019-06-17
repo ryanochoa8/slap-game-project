@@ -22,9 +22,9 @@ let items = {
 // let multiplier =
 
 function giveFire() {
-  if (items.name == "Fire") {
-    morty.items.push(items['fire'].modifier) // is this line correct?
-  }
+  // if (items.name == "Fire") {
+  morty.items.push(items['fire'].modifier) // is this line correct?
+  // }
   update(morty)
 }
 
@@ -33,31 +33,31 @@ function giveFire() {
 
 
 function giveShock() {
-  if (items.name == 'Shock') {
-    morty.items.push(items.shock['modifier']) // or is this correct?
-  }
+  // if (items.name == 'Shock') {
+  morty.items.push(items.shock['modifier']) // or is this correct?
+  // }
   update(morty)
 }
 
 function giveShield() {
-  if (items.name == 'Shield') {
-    morty.items.push(items.shield['modifier'])
-  }
+  // if (items.name == 'Shield') {
+  morty.items.push(items.shield['modifier'])
+  // }
   update(morty)
 }
 
 function addMods() { // is this function correct?
-  let mods = morty.items['modifier']
   let sum = 0
   for (let i = 0; i < morty.items.length; i++) {
-    sum += mods[i];
+    let mods = morty.items[i] // alias
+    sum += mods;
   }
   return sum
 }
 
 function slap() {
   if (morty.health > 0) {
-    morty.health -= morty.attacks['slap'];
+    morty.health -= morty.attacks['slap'] + addMods();
     morty.hits++;
   }
   update(morty)
@@ -65,7 +65,7 @@ function slap() {
 
 function punch() {
   if (morty.health >= 5) {
-    morty.health -= morty.attacks['punch'];
+    morty.health -= morty.attacks['punch'] + addMods();
     morty.hits++;
   }
   update(morty)
@@ -73,7 +73,7 @@ function punch() {
 
 function kick() {
   if (morty.health >= 10) {
-    morty.health -= morty.attacks['kick'];
+    morty.health -= morty.attacks['kick'] + addMods();
     morty.hits++;
   }
   update(morty)
