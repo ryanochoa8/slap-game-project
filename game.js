@@ -7,7 +7,7 @@ function slap() {
     health--;
     hits++;
   }
-  update(health, hits)
+  update(health, hits, slapee)
 }
 
 function punch() {
@@ -15,7 +15,7 @@ function punch() {
     health -= 5;
     hits++;
   }
-  update(health, hits)
+  update(health, hits, slapee)
 }
 
 function kick() {
@@ -23,16 +23,17 @@ function kick() {
     health -= 10;
     hits++;
   }
-  update(health, hits)
+  update(health, hits, slapee)
 }
 
 
 
-function update(health, hits) {
+function update(health, hits, slapee) {
   document.getElementById("health").innerText = health;
   document.getElementById("hits").innerText = hits;
+  document.getElementById("slapee").innerText = slapee;
 }
 
 
-update(health, hits)
+update(health, hits, slapee)
 

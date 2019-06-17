@@ -13,20 +13,26 @@
 
 <body>
   <div class="container">
-    <div class="row">
-      <div class="col-4">Modifier</div>
-      <div class="col-4">Placeholder</div>
-      <span>Health:<span id="health"></span></span>
-      <span>Name: <span id="name"></span></span>
-      <span>Hits:<span id="hits"></span></span>
+    <div class="row justify-content-center">
+      <col-4 class="mx-4">
+        <span>Name: <span id="slapee"></span></span>
+      </col-4>
+      <col-4 class="mx-4">
+        <span>Health:<span id="health"></span></span>
+      </col-4>
+      <col-4 class="mx-4">
+        <span>Hits:<span id="hits"></span></span>
+      </col-4>
     </div>
-    <div class="row">
+    <div class="row text-center">
       <div class="col">
-        <img id="opponent" src="//placehold.it/200x200" class="img-thumbnail">
+        <img id="opponent"
+          src="https://cdn.shopify.com/s/files/1/1211/8882/products/Happy_Morty_Web_1024x1024.jpg?v=1503605432"
+          height="200" width="200" class="img">
       </div>
     </div>
-    <div class="row">
-      <footer>
+    <footer>
+      <div class="row pt-5 text-center">
         <div class="col-4">
           <button class="btn btn-outline-danger" onclick="slap()">Slap!</button>
         </div>
@@ -36,8 +42,8 @@
         <div class="col-4">
           <button class="btn btn-outline-danger" onclick="kick()">Kick!</button>
         </div>
-      </footer>
-    </div>
+    </footer>
+  </div>
   </div>
 
 
