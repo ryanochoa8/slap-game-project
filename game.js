@@ -59,6 +59,7 @@ function slap() {
   if (morty.health > 0) {
     morty.health -= morty.attacks['slap'] + addMods();
     morty.hits++;
+    knockout();
   }
   update(morty)
 }
@@ -67,6 +68,7 @@ function punch() {
   if (morty.health >= 5) {
     morty.health -= morty.attacks['punch'] + addMods();
     morty.hits++;
+    knockout();
   }
   update(morty)
 }
@@ -75,11 +77,16 @@ function kick() {
   if (morty.health >= 10) {
     morty.health -= morty.attacks['kick'] + addMods();
     morty.hits++;
+    knockout();
   }
   update(morty)
 }
 
-
+function knockout() {
+  if (morty.health <= 0) {
+    alert("Knockout!")
+  }
+}
 
 function update(morty) {
   document.getElementById("morty.health").innerText = morty.health;
@@ -89,5 +96,9 @@ function update(morty) {
 //do i need to add anything here for the modifier functions
 
 update(morty)
+
+
+
+
 
 
