@@ -1,3 +1,5 @@
+// do I need a global damage variable?
+
 let morty = {
   name: "Morty",
   health: 100,
@@ -20,14 +22,14 @@ let items = {
 function giveFire() {
   if (items.name = "Fire") {
 
-    morty.items.push("Fire"['modifier']) //questions on this
+    morty.items.push("Fire"['modifier']) // is this line correct?
   }
   update(morty)
 }
 
 function giveShock() {
   if (items.name = 'Shock') {
-    morty.items.push(items.shock) //questions on this
+    morty.items.push(items.shock) // or is this correct?
   }
   update(morty)
 }
@@ -39,7 +41,7 @@ function giveShield() {
   update(morty)
 }
 
-function addMods() { //questions on this
+function addMods() { // is this function correct?
   let mods = morty.items
   let sum = 0
   for (let i = 0; i < morty.items.length; i++) {
