@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="game.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <title>Slap Game</title>
+</head>
+
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="col-4">Modifier</div>
+      <div class="col-4">Placeholder</div>
+      <span>Health:<span id="health"></span></span>
+      <span>Hits:<span id="hits"></span></span>
+    </div>
+    <div class="row">
+      <div class="col">
+        <img id="opponent" src="//placehold.it/200x200" class="img-thumbnail">
+      </div>
+    </div>
+    <div class="row">
+      <footer>
+        <div class="col-4">
+          <button class="btn btn-outline-danger" onclick="slap()">Slap!</button>
+        </div>
+        <div class="col-4">
+          <button class="btn btn-outline-danger" onclick="punch()">Punch!</button>
+        </div>
+        <div class="col-4">
+          <button class="btn btn-outline-danger" onclick="kick()">Kick!</button>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+
+
+  <script src="game.js"></script>
+</body>
+
+</html>
